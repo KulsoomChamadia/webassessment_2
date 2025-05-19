@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+  <!-- Responsive design for different devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title -->
+  <title>Contact Us - Night of Shadows</title>
+  <!-- Google font for spooky theme -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <!-- Header section with main title and navigation -->
+  <header>
+    <h1>Night of Shadows</h1>
+    <nav>
+      <ul>
+        <!-- Navigation links to other pages -->
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="play.html">Game</a></li>
+        <li><a href="lore.html">Lore</a></li>
+        <li><a href="character.html">Characters</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="suggest.html">Suggest Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area specific to contact form -->
+  <main class="contact-page">
+    <!-- Page subtitle with foggy effect styling -->
+    <h2 class="foggy-title">Reach Out from the Shadows</h2>
+
+    <!-- Contact form for users to submit their message -->
+    <form id="contact-form">
+      <!-- Input for user's name -->
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Input for user's email address -->
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Textarea for user's message -->
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <!-- Submit button styled with shadow effect -->
+      <button type="submit" class="shadow-button">Send Message</button>
+    </form>
+
+    <!-- Confirmation message hidden by default, shown after form submit -->
+    <p id="form-response" style="display:none; color: #c33;">
+      Your message has been swallowed by the shadows...
+    </p>
+  </main>
+
+  <!-- Audio element to play send message sound effect -->
+  <audio id="send-sound">
+    <source src="../audio/send.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Inline JavaScript to handle form submission and sound playback -->
+  <script>
+    // Get references to form and audio elements
+    const form = document.getElementById('contact-form');
+    const sendSound = document.getElementById('send-sound');
+
+    // Add event listener for form submission
+    form.addEventListener('submit', function(e) {
+      // Prevent the default form submission (page reload)
+      e.preventDefault();
+
+      // Restart and play the send sound effect
+      sendSound.currentTime = 0;
+      sendSound.play();
+
+      // After 1 second (to allow sound to play), reset form and show confirmation
+      setTimeout(() => {
+        form.reset(); // Clear the form inputs
+        document.getElementById('form-response').style.display = 'block'; // Show confirmation message
+      }, 1000); // 1000 ms delay matching sound duration
+    });
+  </script>
+
+  <!-- Footer section with copyright and social links -->
+  <footer>
+    <p>&copy; 2025 Night of Shadows</p>
+    <p class="footer-quote">“The shadows remember everything... do you?”</p>
+    <p class="footer-follow">We won’t haunt your inbox... much.</p>
+    <div class="social-links">
+      <!-- Social media icons with accessible labels and links -->
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
+        <img src="../images/twiter.png" alt="Twitter" />
+      </a>
+      <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+        <img src="../images/insta.png" alt="Instagram" />
+      </a>
+      <a href="#" aria-label="Discord" title="Discord" target="_blank" rel="noopener">
+        <img src="../images/discord.png" alt="Discord" />
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

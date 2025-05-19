@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for text -->
+  <meta charset="UTF-8" />
+  <!-- Responsive viewport settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Page title -->
+  <title>Quiz – Night of Shadows</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="../quiz.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Google font for spooky-themed text -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Site header with main title and navigation -->
+  <header>
+    <h1>Night of Shadows</h1>
+    <nav>
+      <ul>
+        <!-- Navigation menu linking to other site pages -->
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="lore.html">Lore</a></li>
+        <li><a href="character.html">Characters</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="suggest.html">Suggest Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Quiz section container -->
+    <section class="quiz-section">
+      <div class="quiz-box">
+        <!-- Quiz title -->
+        <h2>Which Night of Shadows Character Are You?</h2>
+        <!-- Quiz form starts here -->
+        <form id="quizForm">
+          <!-- Question 1 -->
+          <p>1. What scares you the most?</p>
+          <!-- Radio buttons for question 1 with required attribute -->
+          <label><input type="radio" name="q1" value="patient" required> Losing control</label><br>
+          <label><input type="radio" name="q1" value="whisper"> Being watched</label><br>
+          <label><input type="radio" name="q1" value="doctor"> The unknown</label><br>
+
+          <!-- Question 2 -->
+          <p>2. What's your first instinct in danger?</p>
+          <!-- Radio buttons for question 2 -->
+          <label><input type="radio" name="q2" value="patient" required> Run</label><br>
+          <label><input type="radio" name="q2" value="whisper"> Hide</label><br>
+          <label><input type="radio" name="q2" value="doctor"> Investigate</label><br>
+
+          <!-- Submit button to reveal quiz result -->
+          <button type="submit" class="submit-button">Reveal Your Character</button>
+        </form>
+
+        <!-- Container where the quiz result will be displayed -->
+        <div id="result" class="reveal-answer"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Background music that plays automatically and loops -->
+  <audio id="bg-music" autoplay loop>
+    <source src="../audio/horror-bg.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Button to toggle mute/unmute for background music -->
+  <button id="mute-btn">🔊 Mute</button>
+
+  <!-- Sound effect to play when revealing the quiz result -->
+  <audio id="revealSound" src="../audio/quiz.mp3" preload="auto"></audio>
+
+  <!-- Footer section with copyright and social media links -->
+  <footer>
+    <p>&copy; 2025 Night of Shadows</p>
+    <p class="footer-quote">“The shadows remember everything... do you?”</p>
+    <p class="footer-follow">We won’t haunt your inbox... much.</p>
+    <div class="social-links">
+      <!-- Social icons with accessibility and security attributes -->
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
+        <img src="../images/twiter.png" alt="Twitter" />
+      </a>
+      <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+        <img src="../images/insta.png" alt="Instagram" />
+      </a>
+      <a href="#" aria-label="Discord" title="Discord" target="_blank" rel="noopener">
+        <img src="../images/discord.png" alt="Discord" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- JavaScript files loaded with defer to run after parsing -->
+  <script src="../quiz.js" defer></script> <!-- Quiz logic -->
+  <script src="../index.js" defer></script> <!-- Site-wide scripts (mute button, audio) -->
+
+</body>
+</html>

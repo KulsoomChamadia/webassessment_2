@@ -1,0 +1,651 @@
+/* === General Styles === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+}
+
+/* === Header === */
+header {
+    background: linear-gradient(to right, #111, #222);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff3333;
+    text-shadow: 2px 2px #000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff3333;
+}
+
+/* === Main Content === */
+main .intro {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('images/horror.jpg') no-repeat center center;
+    background-size: cover;
+    color: #f1f1f1;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+main .intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/tumblr_fe9da0fd1c618da52abc9038d7886133_a485af04_540.gif') repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: moveFog 60s linear infinite;
+    pointer-events: none;
+}
+
+main .intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* === Character Section === */
+.character-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.character-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Creepster', cursive;
+}
+
+.character-card {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    background-color: #2e2e2e;
+    border: 3px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+}
+
+.character-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #444;
+}
+
+.character-description {
+    padding: 15px;
+    text-align: center;
+}
+
+.character-description h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Creepster', cursive;
+}
+
+.character-description p {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* === Play Section === */
+.play-section {
+    text-align: center;
+    padding: 60px;
+    background-color: #111;
+    color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #b30000;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
+
+/* === Lore Section === */
+.lore-section {
+    background: linear-gradient(to bottom, #0b0b0b, #1a1a1a);
+    color: #eaeaea;
+    padding: 60px 20px;
+    font-family: 'Merriweather', serif;
+    min-height: 100vh;
+}
+
+.lore-section h2 {
+    color: #ff3333;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px black;
+}
+
+.lore-content {
+    background-color: rgba(20, 20, 20, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #4d0000;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    border: 1px solid #330000;
+}
+
+.lore-content p {
+    margin-bottom: 20px;
+}
+
+/* === Quiz Page === */
+.quiz-section {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: #ffffff;
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+.quiz-box {
+    background-color: #121212;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #990000;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid #2b0000;
+}
+
+.quiz-box h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff1a1a;
+    margin-bottom: 30px;
+}
+
+.quiz-box label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffcccc;
+}
+
+.quiz-box input[type="text"],
+.quiz-box select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    background-color: #1f1f1f;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.quiz-box .submit-button {
+    background-color: #cc0000;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.quiz-box .submit-button:hover {
+    background-color: #ff0000;
+}
+/* newwwwwwww */
+.quiz-box label {
+    border-left: 4px solid #990000;
+    padding-left: 10px;
+    text-shadow: 1px 1px 3px black;
+}
+.quiz-box input[type="text"]:focus,
+.quiz-box select:focus {
+    border-color: #cc0000;
+    box-shadow: 0 0 10px #cc0000;
+    outline: none;
+}
+.quiz-box .submit-button {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0px #cc0000; }
+    50% { box-shadow: 0 0 10px #cc0000; }
+    100% { box-shadow: 0 0 0px #cc0000; }
+}
+.quiz-section {
+    background: url('images/istockphoto-1402761743-640x640.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.quiz-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+.quiz-box .submit-button {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0px #cc0000; }
+    50% { box-shadow: 0 0 10px #cc0000; }
+    100% { box-shadow: 0 0 0px #cc0000; }
+}
+.reveal-answer {
+    font-family: 'Creepster', cursive;
+    color: #ff1a1a;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #cc0000, 0 0 20px #990000;
+    margin-top: 30px;
+    animation: flicker 2s infinite;
+  }
+  
+  @keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 5px #990000; }
+    50% { opacity: 0.8; text-shadow: 0 0 15px #cc0000; }
+    100% { opacity: 1; text-shadow: 0 0 5px #990000; }
+  }
+  
+/* === Shadow Button === */
+.shadow-button-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.shadow-button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #1a0000;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Creepster', cursive;
+    border: 2px solid #ff0000;
+    border-radius: 12px;
+    text-decoration: none;
+    text-shadow: 2px 2px 8px #000;
+    box-shadow: 0 0 15px #990000, 0 0 30px #330000 inset;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.shadow-button:hover {
+    background-color: #330000;
+    color: #ff0000;
+    transform: scale(1.05);
+}
+.foggy-title {
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    z-index: 1;
+}
+
+.foggy-title::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background: url('images/tumblr_fe9da0fd1c618da52abc9038d7886133_a485af04_540.gif') repeat;
+    opacity: 0.02;
+    z-index: 0;
+    pointer-events: none;
+    animation: moveFog 60s linear infinite;
+    border-radius: 10px;
+}
+
+
+
+@keyframes moveFog {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 0; }
+}
+
+#mute-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    padding: 10px 15px;
+    background: #330000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #mute-btn:hover {
+    background: #550000;
+  }
+  /* suggested game page*/
+.horror-font {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #ff3333;
+    margin-top: 1rem;
+  }
+  
+  /* Foggy background */
+  .foggy-bg {
+    background: url('../images/misty-fog-texture-kmuqcf93jgkvqygl.jpeg') repeat center center;
+    background-color: #000;
+    background-blend-mode: overlay;
+    color: #eee;
+  }
+  
+  /* Suggested Games layout */
+  .suggested-games {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .game {
+    display: flex;
+    gap: 1rem;
+    background-color: rgba(20, 20, 20, 0.85);
+    border: 1px solid #444;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .game:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+  }
+  
+  .game-cover {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .game-info h2 {
+    color: #ff4444;
+    margin-bottom: 0.5rem;
+  }
+  
+  .game-info p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  a {
+    display: inline-block;
+    margin: 2rem auto;
+    text-align: center;
+    font-weight: bold;
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+  }
+  
+  a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px red;
+  }
+  #downloadBtn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #b30000;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow:
+      0 0 5px #ff3333,
+      0 0 15px #ff1a1a,
+      0 0 30px #b30000,
+      0 0 40px #b30000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #downloadBtn:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+    box-shadow:
+      0 0 10px #ff4d4d,
+      0 0 20px #ff3333,
+      0 0 40px #ff1a1a,
+      0 0 60px #b30000;
+  }
+  .answer {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.answer.show {
+    display: block;
+    opacity: 1;
+}
+body {
+    cursor: url('images/jjj.cur'), auto;
+}
+header h1 {
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { text-shadow: 2px 2px #000; }
+    50% { text-shadow: 2px 2px 10px #ff1a1a; }
+}
+.character-showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 4rem 2rem;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+  }
+  
+  .character-info-box {
+    max-width: 50%;
+    background: #111;
+    color: #e0d8b0;
+    padding: 2rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .character-info-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e0d8b0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .character-info-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .nav-arrows {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .nav-arrows button {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-arrows button:hover {
+    background: rgba(255, 0, 0, 0.6);
+  }
+  
+  .character-img-box {
+    max-width: 40%;
+  }
+  
+  .character-img-box img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  }
+  
+  .contact-page {
+    max-width: 600px;
+    margin: 60px auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border: 2px solid #800;
+    border-radius: 10px;
+    color: #eee;
+  }
+  
+  .contact-page label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f55;
+  }
+  
+  .contact-page input,
+  .contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #400;
+    border-radius: 5px;
+  }
+  
+  .contact-page button {
+    margin-top: 20px;
+  }
+  .shadow-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 8px #ff3333 inset;
+  }
+
+  footer {
+    background: rgba(10, 10, 10, 0.9);
+    text-align: center;
+    padding: 25px 10px;
+    color: #c1aeae;
+    font-family: 'Creepster', cursive;
+    border-top: 2px solid #660000;
+    user-select: none;
+  }
+  
+  .footer-quote {
+    font-style: italic;
+    margin: 8px 0 6px;
+    color: #bc8f8f;
+    font-size: 1.1rem;
+    text-shadow: 0 0 8px #ee5555;
+  }
+  
+  .footer-follow {
+    font-family: 'Creepster', cursive;
+    color: #c1aeae;
+    font-size: 1rem;
+    margin: 6px 0 20px;
+    text-shadow: 0 0 6px #ee5555;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a img {
+    width: 28px;
+    filter: drop-shadow(0 0 5px #aa0000);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .social-links a:hover img {
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 10px #ff3333);
+    cursor: pointer;
+  }
+  

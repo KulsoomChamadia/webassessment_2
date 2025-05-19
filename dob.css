@@ -1,0 +1,122 @@
+/* Import Google font Creepster for horror-style titles */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Basic dark horror theme for the whole page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace; /* Monospace font for a vintage, eerie feel */
+  color: #f8dada; /* Light pinkish text color for contrast on dark background */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Additional styles for html and body for full screen black background and GIF */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+  background-color: black; /* fallback background color */
+  font-family: 'Courier New', monospace;
+  color: #f8dada;
+
+  /* Add animated GIF as background, fixed and covering entire screen */
+  background: url('images/broken.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Body background reinforcement */
+body {
+  background-color: black;
+}
+
+/* Title effect with the imported Creepster font */
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  color: #d67c7c; /* dark pinkish-red color */
+  text-shadow: 0 0 5px red, 0 0 10px black; /* glowing red and black shadow */
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+/* Container for date of birth or similar input section */
+.dob-container {
+  font-family: 'Creepster', cursive;
+  background-color: rgba(0, 0, 0, 0.85); /* mostly opaque black background */
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ff000050; /* subtle red glow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling dropdown menus */
+select {
+  background-color: #111; /* very dark grey */
+  color: #fff; /* white text */
+  border: 1px solid red; /* red border */
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Highlight dropdown when focused */
+select:focus {
+  border-color: #ff0000; /* bright red border */
+  box-shadow: 0 0 10px red; /* glowing red outline */
+}
+
+/* Styling buttons to match horror theme */
+button {
+  background: transparent;
+  color: red;
+  border: 1px solid red;
+  font-family: 'Courier New', monospace;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* smooth hover transition */
+}
+
+/* Button hover effect: red background with black text */
+button:hover {
+  background: red;
+  color: black;
+  box-shadow: 0 0 10px red; /* red glow */
+}
+
+/* Glitch text effect - uses pseudo elements (::before and ::after) */
+/* Shifts and shadows to create glitch illusion */
+.glitch::before {
+  top: -2px;
+  text-shadow: 2px 0 red;
+  animation: glitchTop 1s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  top: 2px;
+  text-shadow: -2px 0 #0ff;
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+}
+
+/* Animation clips to create glitch slicing effect on top portion */
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  100% { clip: rect(0, 9999px, 100%, 0); }
+}
+
+/* Animation clips to create glitch slicing effect on bottom portion */
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 100%, 0); }
+  100% { clip: rect(100%, 9999px, 100%, 0); }
+}

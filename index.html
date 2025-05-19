@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for the document -->
+  <meta charset="UTF-8" />
+  <!-- Responsive design: sets viewport width and initial zoom level -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title shown in the browser tab -->
+  <title>Night of Shadows</title>
+  <!-- Google Fonts: Creepster font for spooky themed text -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <!-- Website header containing main title and navigation -->
+  <header>
+    <!-- Main site title -->
+    <h1>Night of Shadows</h1>
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <!-- Navigation links to main pages -->
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="pages/play.html">Game</a></li>
+        <li><a href="pages/lore.html">Lore</a></li>
+        <li><a href="pages/character.html">Characters</a></li>
+        <li><a href="pages/quiz.html">Quiz</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/suggest.html">Suggest Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Introductory section with foggy title style -->
+    <section class="intro">
+      <div class="foggy-title">
+        <!-- Secondary heading -->
+        <h2>Enter the Nightmare</h2>
+      </div>
+      <!-- Introductory descriptive text -->
+      <p>Face your fears in the chilling world of shadows and secrets.</p>
+    </section>
+
+    <!-- Container for the call-to-action button -->
+    <div class="shadow-button-container">
+      <!-- Button styled as a shadowy link leading to the game page -->
+      <a href="pages/play.html" class="shadow-button">Step Into The Shadows</a>
+    </div>
+  </main>
+
+  <!-- Background music audio element with autoplay and looping -->
+  <audio id="bg-music" autoplay loop>
+    <!-- MP3 source for background horror music -->
+    <source src="audio/horror-bg.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Button to mute/unmute the background music -->
+  <button id="mute-btn">🔊 Mute</button>
+  
+  <!-- External JavaScript file for interactivity, e.g. mute button functionality -->
+  <script src="../index.js"></script>
+  
+  <!-- Footer with copyright and social media links -->
+  <footer>
+    <!-- Copyright notice -->
+    <p>&copy; 2025 Night of Shadows</p>
+    <!-- Thematic footer quote -->
+    <p class="footer-quote">“The shadows remember everything... do you?”</p>
+    <!-- Lighthearted message about email -->
+    <p class="footer-follow">We won’t haunt your inbox... much.</p>
+    <!-- Social media icon links -->
+    <div class="social-links">
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
+        <img src="../images/twiter.png" alt="Twitter" />
+      </a>
+      <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+        <img src="../images/insta.png" alt="Instagram" />
+      </a>
+      <a href="#" aria-label="Discord" title="Discord" target="_blank" rel="noopener">
+        <img src="../images/discord.png" alt="Discord" />
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

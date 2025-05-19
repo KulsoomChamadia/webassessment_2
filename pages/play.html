@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for proper text display -->
+    <meta charset="UTF-8">
+    <!-- Viewport for responsive design on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in the browser tab -->
+    <title>Characters</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Google Fonts: Creepster for spooky styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Site header containing title and navigation menu -->
+    <header>
+        <h1>Night of Shadows</h1>
+        <nav>
+            <ul>
+              <!-- Navigation links to main pages -->
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="play.html">Game</a></li>
+              <li><a href="lore.html">Lore</a></li>
+              <li><a href="character.html">Characters</a></li>
+              <li><a href="quiz.html">Quiz</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="suggest.html">Suggest Game</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <!-- Main content section about downloading the game -->
+    <main class="play-section">
+        <!-- Section heading -->
+        <h2>Download and Play</h2>
+        <!-- Introductory text -->
+        <p>Click the button below to download the game and start your descent into madness.</p>
+
+        <!-- Download button with link to zip file -->
+        <a href="game.zip" download id="downloadBtn">🔽 Download Game</a>
+        <!-- Sound effect to play when download button is clicked -->
+        <audio id="downloadSound" src="../audio/download.mp3" preload="auto"></audio>
+
+        <!-- System requirements for running the game -->
+        <p><strong>Requirements:</strong> Windows 10+, 2GB RAM, Headphones recommended for best experience.</p>
+
+        <!-- Note about upcoming online version -->
+        <p><em>Online version coming soon... Stay tuned.</em></p>
+    </main>
+
+    <!-- Background music that autoplays and loops -->
+    <audio id="bg-music" autoplay loop>
+        <source src="../audio/horror-bg.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Button to mute/unmute the background music -->
+    <button id="mute-btn">🔊 Mute</button>
+
+    <!-- External JavaScript file for interactivity like mute button and download sound -->
+    <script src="../index.js"></script>
+
+    <!-- Footer section with copyright and social media links -->
+    <footer>
+        <p>&copy; 2025 Night of Shadows</p>
+        <p class="footer-quote">“The shadows remember everything... do you?”</p>
+        <p class="footer-follow">We won’t haunt your inbox... much.</p>
+        <div class="social-links">
+          <!-- Social media icon links with accessibility attributes -->
+          <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
+            <img src="../images/twiter.png" alt="Twitter" />
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+            <img src="../images/insta.png" alt="Instagram" />
+          </a>
+          <a href="#" aria-label="Discord" title="Discord" target="_blank" rel="noopener">
+            <img src="../images/discord.png" alt="Discord" />
+          </a>
+        </div>
+    </footer>
+</body>
+</html>

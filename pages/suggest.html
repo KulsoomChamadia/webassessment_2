@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for proper text display -->
+  <meta charset="UTF-8" />
+  <!-- Page title -->
+  <title>Suggested Horror Games</title>
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Horror-style font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<!-- Apply foggy background style via class -->
+<body class="foggy-bg">
+    <!-- Site header with title and navigation menu -->
+    <header>
+        <h1>Night of Shadows</h1>
+        <nav>
+            <ul>
+              <!-- Navigation links to main pages -->
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="game.html">Game</a></li>
+              <li><a href="lore.html">Lore</a></li>
+              <li><a href="character.html">Characters</a></li>
+              <li><a href="quiz.html">Quiz</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="suggest.html">Suggest Game</a></li>
+            </ul>
+          </nav>
+    </header>
+
+  <!-- Main content area listing suggested horror games -->
+  <main class="suggested-games">
+    <!-- Individual game entry -->
+    <article class="game">
+      <!-- Game cover image -->
+      <img src="../images/outlast.jpeg" alt="Outlast cover" class="game-cover" />
+      <div class="game-info">
+        <!-- Game title -->
+        <h2>Outlast</h2>
+        <!-- Brief game description -->
+        <p>A terrifying first-person survival horror game set in an abandoned asylum. Hide, run, and survive.</p>
+      </div>
+    </article>
+
+    <article class="game">
+      <img src="../images/The-Dark-Descent.jpeg" alt="Amnesia cover" class="game-cover" />
+      <div class="game-info">
+        <h2>Amnesia: The Dark Descent</h2>
+        <p>Explore a shadowy castle while dealing with horrific creatures and your dwindling sanity.</p>
+      </div>
+    </article>
+
+    <article class="game">
+      <img src="../images/MADiSON.jpg" alt="MADiSON" class="game-cover" />
+      <div class="game-info">
+        <h2>MADiSON</h2>
+        <p>A chilling first-person psychological horror game where you’re trapped in a haunted house with a 
+            demonic presence. Use a cursed Polaroid camera to uncover secrets, solve puzzles, and survive the 
+            nightmare.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Background music that auto-plays and loops -->
+  <audio id="bg-music" autoplay loop>
+    <source src="../audio/horror-bg.mp3" type="audio/mp3">
+  </audio>
+  
+  <!-- Mute button for background music -->
+  <button id="mute-btn">🔊 Mute</button>
+  
+  <!-- Link back to home page -->
+  <a href="../index.html">⬅ Back to Home</a>
+<!-- liink to javascript file -->
+  <script src="../index.js"></script>
+
+
+  <!-- Footer with copyright and social media links -->
+  <footer>
+    <p>&copy; 2025 Night of Shadows</p>
+    <p class="footer-quote">“The shadows remember everything... do you?”</p>
+    <p class="footer-follow">We won’t haunt your inbox... much.</p>
+    <div class="social-links">
+      <!-- Social media icons with alt text and accessibility labels -->
+      <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
+        <img src="../images/twiter.png" alt="Twitter" />
+      </a>
+      <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+        <img src="../images/insta.png" alt="Instagram" />
+      </a>
+      <a href="#" aria-label="Discord" title="Discord" target="_blank" rel="noopener">
+        <img src="../images/discord.png" alt="Discord" />
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

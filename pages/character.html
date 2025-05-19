@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for the document -->
+  <meta charset="UTF-8" />
+  <!-- Ensure proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Page title shown in browser tab -->
+  <title>Characters</title>
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Google font 'Creepster' for spooky/horror vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Site header containing the main title and navigation menu -->
+  <header>
+    <h1>Night of Shadows</h1>
+    <nav>
+      <ul>
+        <!-- Navigation links to other pages of the site -->
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="lore.html">Lore</a></li>
+        <li><a href="character.html">Characters</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="suggest.html">Suggest Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Section showcasing a character -->
+    <section class="character-showcase">
+      <!-- Box containing character's name, description, and navigation arrows -->
+      <div class="character-info-box">
+        <!-- Character name and number -->
+        <h2 id="character-name">01. The Patient</h2>
+        <!-- Character description paragraph -->
+        <p id="character-desc">
+          A lost soul with fragmented memories. Once human, now tormented by shadows only they can see.
+        </p>
+        <!-- Navigation arrows to browse between characters -->
+        <div class="nav-arrows">
+          <!-- Left arrow button -->
+          <button class="carousel-arrow left">&#8592;</button>
+          <!-- Display current character count -->
+          <span id="carousel-count">01 / 03</span>
+          <!-- Right arrow button -->
+          <button class="carousel-arrow right">&#8594;</button>
+        </div>
+      </div>
+      <!-- Box containing the character image -->
+      <div class="character-img-box">
+        <!-- Character image with alt text for accessibility -->
+        <img id="character-image" src="../images/the-patient.jpeg" alt="The Patient" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Background music audio element -->
+  <audio id="bg-music" autoplay loop>
+    <!-- Source file for the background music -->
+    <source src="../audio/horror-bg.mp3" type="audio/mp3" />
+  </audio>
+
+  <!-- Button to toggle mute/unmute of the background music -->
+  <button id="mute-btn">🔊 Mute</button>
+
+  <!-- Link to external JavaScript controlling character carousel and audio -->
+  <script src="../character.js"></script>
+  <script src="../index.js"></script>
+
+</body>
+
+<!-- Footer section for copyright, quotes, and social links -->
+<footer>
+  <p>&copy; 2025 Night of Shadows</p>
+  <p class="footer-quote">“The shadows remember everything... do you?”</p>
+  <p class="footer-follow">We won’t haunt your inbox... much.</p>
+  <!-- Social media links with accessible labels and icons -->
+  <div class="social-links">
+    <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
+      <img src="../images/twiter.png" alt="Twitter" />
+    </a>
+    <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+      <img src="../images/insta.png" alt="Instagram" />
+    </a>
+    <a href="#" aria-label="Discord" title="Discord" target="_blank" rel="noopener">
+      <img src="../images/discord.png" alt="Discord" />
+    </a>
+  </div>
+</footer>
+</html>

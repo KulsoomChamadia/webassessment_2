@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    <!-- Responsive viewport for mobile and other devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab -->
+    <title>Characters</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Google Fonts import for "Creepster" font -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page header with site title and navigation menu -->
+    <header>
+        <h1>Night of Shadows</h1>
+        <nav>
+            <ul>
+              <!-- Navigation links to main sections of the site -->
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="play.html">Game</a></li>
+              <li><a href="lore.html">Lore</a></li>
+              <li><a href="character.html">Characters</a></li>
+              <li><a href="quiz.html">Quiz</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="suggest.html">Suggest Game</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <!-- Main content section for lore related to characters -->
+    <main>
+        <section class="lore-section">
+          <!-- Section title -->
+          <h2>The Legend of Black Hollow Asylum</h2>
+
+          <!-- Introductory paragraphs explaining backstory -->
+          <p>Decades ago, Black Hollow Asylum was shut down after a series of disappearances. The official report blamed faulty infrastructure... but locals whisper of strange rituals and inhuman experiments.</p>
+
+          <p>Some say the spirits of the patients still roam the halls, seeking justice. Others claim the doctors went mad... or were possessed.</p>
+
+          <!-- Subheading for notable events in the asylum's history -->
+          <h3>Known Events:</h3>
+          <ul>
+            <!-- List of significant spooky events with icons -->
+            <li>⚠️ 1974: Sudden closure after "The Screaming Night"</li>
+            <li>👁️ 1980: Sightings of shadowy figures in nearby woods</li>
+            <li>📻 1992: Radio interference with eerie whispers near the site</li>
+          </ul>
+
+          <!-- Emphasized text to set an ominous tone -->
+          <p><em>Your journey begins here...</em></p>
+        </section>
+    </main>
+
+    <!-- Background music audio element set to autoplay and loop -->
+    <audio id="bg-music" autoplay loop>
+      <source src="../audio/horror-bg.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Mute/unmute button for background music -->
+    <button id="mute-btn">🔊 Mute</button>
+
+    <!-- External JavaScript file controlling audio and other interactions -->
+    <script src="../index.js"></script>
+
+    <!-- Footer with copyright and social media links -->
+    <footer>
+        <p>&copy; 2025 Night of Shadows</p>
+        <p class="footer-quote">“The shadows remember everything... do you?”</p>
+        <p class="footer-follow">We won’t haunt your inbox... much.</p>
+        <div class="social-links">
+          <!-- Social media icon links with aria labels for accessibility -->
+          <a href="#" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener">
+            <img src="../images/twiter.png" alt="Twitter" />
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+            <img src="../images/insta.png" alt="Instagram" />
+          </a>
+          <a href="#" aria-label="Discord" title="Discord" target="_blank" rel="noopener">
+            <img src="../images/discord.png" alt="Discord" />
+          </a>
+        </div>
+    </footer>
+</body>
+</html>
